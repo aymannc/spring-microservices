@@ -21,10 +21,10 @@ public class CustomerServiceApplication implements CommandLineRunner {
 
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         repositoryRestConfiguration.exposeIdsFor(Customer.class);
         customerRepository.save(new Customer(1L, "Ayman", "ayman@nait.com"));
         customerRepository.save(new Customer(2L, "Med", "med@med.com"));
-        customerRepository.save(new Customer(3L, "Imane", "imane@imane.com"));
+        customerRepository.save(new Customer(3L, "Saad", "saad@gmail.com"));
     }
 }
