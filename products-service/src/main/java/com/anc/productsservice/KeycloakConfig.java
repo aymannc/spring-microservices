@@ -35,6 +35,7 @@ class SecurityConfiguration extends KeycloakWebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
-        http.authorizeRequests().anyRequest().hasAuthority("PRODUCT_MANAGER");
+//        http.authorizeRequests().anyRequest().hasAuthority("PRODUCT_MANAGER");
+        http.authorizeRequests().anyRequest().authenticated();
     }
 }

@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-//@FeignClient(name = "PRODUCTS-SERVICE", url = "http://localhost:8082")
-@FeignClient(name = "PRODUCTS-SERVICE")
+@FeignClient(name = "PRODUCTS-SERVICE", url = "http://localhost:8082")
+//@FeignClient(name = "PRODUCTS-SERVICE")
 public interface ProductsRestClient {
 //    @GetMapping(path = "/products")
 //    PagedModel<Product> pageProducts(@QueryParam(value = "page") int page,

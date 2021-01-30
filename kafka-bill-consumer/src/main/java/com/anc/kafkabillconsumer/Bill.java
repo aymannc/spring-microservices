@@ -1,4 +1,4 @@
-package com.anc.productsservice;
+package com.anc.kafkabillconsumer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,18 +10,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
 @Entity
-public class Product {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Bill {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String image;
-    private double price;
-    private int quantity;
+    private String customerName;
+    private Float total;
 }
